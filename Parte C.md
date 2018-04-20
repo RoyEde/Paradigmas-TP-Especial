@@ -84,3 +84,50 @@ class Arma {
   c. Puede verse el uso polimórfico de villanos y héroes en la solución.
 
 2. Proponer una solución alternativa que corrija las observaciones realizadas en el punto anterior y cualquier otra mejora que sea apropiada.
+
+
+1. Respuestas:
+
+  a. _Falso, en caso de no cumplir la condición finaliza el método sin hacer nada._
+
+  b. _Verdadero, pero va a ser necesario llamar el método súper en la clase Villano para poder asignar la condición de que pueda dañar a cualquier personaje._
+
+  c. _Verdadero, el método_ `recibirDaño` _es común a todos los personajes pero su aplicación varía según el personaje (varía el daño que aplica)._
+
+2. Solución alternativa:
+
+### Wollok
+```
+class Personaje {
+  var enemigos = []
+  method recibirDaño(cantidad) {...}
+  method atacar(personaje) {
+    if (enemigos.contains(personaje))
+    personaje.recibirDaño(self.poder())
+  }
+}
+
+class Heroe inherits Personaje {
+  var habilidades = []
+  var aliados = []
+  method poder() = habilidades.sum(
+    {h => h.poder() * aliados.size()})
+}
+
+class Villano inherits Personaje {
+  method atacar(personaje) = super() {
+    personaje.recibirDaño(self.poder())
+  }
+  method poder() = armas.sum(
+    {a => a.daño() / a.areaDeEfecto()})
+}
+
+class Habilidad {
+  var poder
+}
+
+class Arma {
+  var daño
+  var areaDeEfecto
+}
+```
