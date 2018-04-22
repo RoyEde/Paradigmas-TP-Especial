@@ -85,6 +85,7 @@ class Arma {
 
 2. Proponer una solución alternativa que corrija las observaciones realizadas en el punto anterior y cualquier otra mejora que sea apropiada.
 
+---
 
 1. Respuestas:
 
