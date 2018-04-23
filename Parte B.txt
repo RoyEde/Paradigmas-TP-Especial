@@ -1,0 +1,10 @@
+PARTE B:
+1)
+-V, al ser de estructuras distintas no puedo unificar todo en una funcion para hacer lo que necesito hacer
+-F, es poco declarativa ya que conozco demasiado la logica de la funcion
+-V, no aplica polimorfismo para ningun caso
+
+2)
+ Responde a la consulta con todas las personas que tienen problemas
+ 
+3)
