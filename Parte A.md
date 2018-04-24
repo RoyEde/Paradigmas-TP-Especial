@@ -14,7 +14,7 @@ cura síntoma = filter (/= síntoma)
 
 -- Para cada enfermedad / conjunto de síntomas
 malMovimiento = ["dolor"]
-varicela = repeat "picazón" <sup>1</sup>
+varicela = repeat "picazón" ¹
 
 -- Asumimos que existe al menos un medicamento capaz de curar cada enfermedad
 mejorMedicamentoPara síntomas = find (curaTodosLos síntomas) todosLosMedicamentos
@@ -35,7 +35,7 @@ _Se pide:_
   todosLosMedicamentos = [sugestión, amoxicilina, bicarbonato, ibuprofeno]
   ```
 
-<sup>1</sup> `repeat x = x : repeat x`
+¹ `repeat x = x : repeat x`
 
 ---
 
