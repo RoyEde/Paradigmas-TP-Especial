@@ -42,9 +42,8 @@ tieneProblemas (Persona) :-
 
 1. Verdadero o Falso:
 
-  a. _Falso, al ser de estructuras distintas no puedo unificar todo en una función para hacer lo que necesito hacer._
-
-  b. _Falso, es poco declarativa ya que conozco demasiado la logica de la consulta._
+  a. _Falso, se repite código en los findall, ya que al ser todas bebidas podríamos tratarlas polimorficamente (como se muestra en el punto 3)._
+  b. _Falso, es poco declarativa ya que conocemos demasiado la lógica de la consulta._
 
   c. _Verdadero, no aplica polimorfismo para ningún caso._
 
