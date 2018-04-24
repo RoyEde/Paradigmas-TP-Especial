@@ -8,3 +8,9 @@ PARTE B:
  Responde a la consulta con todas las personas que tienen problemas
  
 3)
+tieneProblemas(Persona):-
+toma(Persona,_),
+forall(toma(Persona,Bebida),esAlcoholica(Bebida)).
+
+esAlcoholica(vino(_,_)).
+esAlcoholica(cerveza(_,_,A)):- A > 0.
