@@ -87,7 +87,9 @@ class Arma {
 
 ---
 
-1. Respuestas:
+#### Respuestas
+
+1. Verdadero o Falso:
 
   a. _Falso, en caso de no cumplir la condición finaliza el método sin hacer nada._
 
