@@ -5,8 +5,9 @@ PARTE B:
 -V, no aplica polimorfismo para ningun caso
 
 2)
- Responde a la consulta con todas las personas que tienen problemas
- 
+ La consulta tieneProblemas (P) verifica si la persona sólo tomo bebidas alcohólicas   (vino o cerveza con graduación alcohólica >0)
+No permite consultas existenciales ya que utiliza funciones de orden superior sin usar generados, por ende solo permite consultas individuales.
+
 3)
 tieneProblemas(Persona):-
 toma(Persona,_),
