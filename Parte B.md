@@ -43,6 +43,7 @@ tieneProblemas (Persona) :-
 1. Verdadero o Falso:
 
   a. _Falso, se repite código en los findall, ya que al ser todas bebidas podríamos tratarlas polimorficamente (como se muestra en el punto 3)._
+  
   b. _Falso, es poco declarativa ya que conocemos demasiado la lógica de la consulta._
 
   c. _Verdadero, no aplica polimorfismo para ningún caso._
