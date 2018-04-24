@@ -42,9 +42,9 @@ tieneProblemas (Persona) :-
 
 1. Verdadero o Falso:
 
-  a. _Verdadero, al ser de estructuras distintas no puedo unificar todo en una función para hacer lo que necesito hacer._
+  a. _Falso, al ser de estructuras distintas no puedo unificar todo en una función para hacer lo que necesito hacer._
 
-  b. _Falso, es poco declarativa ya que conozco demasiado la logica de la función._
+  b. _Falso, es poco declarativa ya que conozco demasiado la logica de la consulta._
 
   c. _Verdadero, no aplica polimorfismo para ningún caso._
 
