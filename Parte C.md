@@ -91,9 +91,9 @@ class Arma {
 
 1. Verdadero o Falso:
 
-  a. _Falso, en caso de no cumplir la condición finaliza el método sin hacer nada._
+  a. _Verdadero, pierde el sentido del método atacar ya que no informa que ocurre cuando la condición es falsa ni cómo continuará el método._
 
-  b. _Verdadero, pero va a ser necesario llamar el método súper en la clase Villano para poder asignar la condición de que pueda dañar a cualquier personaje._
+  b. _Verdadero, porque es un método que se repite en ambas clases._
 
   c. _Verdadero, el método_ `recibirDaño` _es común a todos los personajes pero su aplicación varía según el personaje (varía el daño que aplica)._
 
