@@ -95,7 +95,11 @@ class Arma {
 
   b. _Verdadero, porque es un método que se repite en ambas clases._
 
-  c. _Verdadero, el método_ `recibirDaño` _es común a todos los personajes pero su aplicación varía según el personaje (varía el daño que aplica)._
+  c. _Verdadero, el para el método_ `poder` _ambas clases responden al mismo mensaje sintáctico pero cada instancia lo hará de forma distinta ya que recibe parámetros de distinto tipo:_
+  
+  _- Villano: (Number, Number)_
+ 
+  _- Héroe: (Number, List)_
 
 2. Solución alternativa:
 
@@ -104,22 +108,28 @@ class Arma {
 class Personaje {
   var enemigos = []
   method recibirDaño(cantidad) {...}
-  method atacar(personaje) {
-    if (enemigos.contains(personaje))
-    personaje.recibirDaño(self.poder())
-  }
+  method atacar(personaje) {}
 }
 
 class Heroe inherits Personaje {
   var habilidades = []
   var aliados = []
+  method atacar(personaje) = super() {
+    if (enemigos.contains(personaje))
+      personaje.recibirDaño(self.poder())
+    else
+      return 'Un héroe solo puede atacar a sus enemigos.'
+  }
   method poder() = habilidades.sum(
     {h => h.poder() * aliados.size()})
 }
 
 class Villano inherits Personaje {
   method atacar(personaje) = super() {
-    personaje.recibirDaño(self.poder())
+    if (enemigos.contains(personaje))
+      personaje.recibirDaño(self.poder() * 2)
+    else
+      personaje.recibirDaño(self.poder())
   }
   method poder() = armas.sum(
     {a => a.daño() / a.areaDeEfecto()})
