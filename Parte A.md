@@ -49,6 +49,7 @@ _Se pide:_
 
 2. _Se aplican orden superior y aplicacion parcial, el orden superior se hace más visible en la función "mejorMedicamentoPara" ya que dentro del "find" se utiliza otra función como parametro, además el "find" tiene control sobre la función "curaTodosLos" ejecutandola primero para poder completar su propia ejecución (un ciudadano de primera clase que controla a otro ciudadano de primera clase) . Aplicacion parcial se usa en (curaTodosLos síntomas) , ahí se ejecuta parcialmente ya que no se le pasa el medicamento,
 y eso genera una nueva función que está esperando recibir un medicamento para poder funcionar._
+
 3. _No devuelve nada, como "varicela" genera una lista infinita y "mejorMedicamentoPara" debe ejecutar un filter para curar los sintomas, haskell en este caso no puede ejecutar perezosamente, debe iterar toda la lista filtrando todos los elementos, por lo tanto nunca termina y la consola no devuelve ningun resultado.
 Si se agregara_ `sugestión` _como medicamento entonces la consulta anterior devolvería_ `"sugestión"` _como el mejor medicamento, a pesar de que necesita tratar con un numero infinito de síntomas, no le importa ya que directamente vacía la
-lista de síntomas y "cura" al paciente, ejecuta perezosamente por lo tanto con solo ejecutar una vez el "sugestion" ya no necesita seguir ejecutando más porque la lista está vacia._
+lista de síntomas y "cura" al paciente, puede ejecutar perezosamente, por lo tanto con solo ejecutar una vez el "sugestion" ya no necesita seguir ejecutando más porque la lista está vacia._
