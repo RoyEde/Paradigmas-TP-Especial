@@ -46,16 +46,18 @@ tieneProblemas (Persona) :-
   
   b. _Falso, es poco declarativa ya que conocemos demasiado la lógica de la consulta._
 
-  c. _Verdadero, no aplica polimorfismo para ningún caso._
+  c. _Verdadero, no aplica polimorfismo para ningún caso ya que podría tratar a las bebidas de la misma forma y no lo hace (como se muestra en el punto 3)_
 
-2. _La consulta_ `tieneProblemas (P)` _verifica si la persona solo tomo bebidas alcohólicas (vino o cerveza con graduación alcohólica >0). No permite consultas existenciales ya que utiliza funciones de orden superior sin usar generados, por ende solo permite consultas individuales._
+2. _La consulta_ `tieneProblemas (P)` _ responde a la consulta de si la persona  tomo bebidas alcohólicas (vino o cerveza con graduación alcohólica >0) dando True en el caso de que sí y Falso en el caso de caso de que no. No permite consultas existenciales ya que utiliza funciones de orden superior sin usar generados, por ende solo permite consultas individuales._
 
 3. Código:
   ```
-  tieneProblemas(Persona):-
-  toma(Persona,_),
-  forall(toma(Persona,Bebida),esAlcoholica(Bebida)).
+  persona(Persona):- toma(Persona,_).
 
-  esAlcoholica(vino(_,_)).
-  esAlcoholica(cerveza(_,_,A)):- A > 0.
+tieneProblemas(Persona):-
+persona(Persona),
+forall(toma(Persona,Bebida),esAlcoholica(Bebida)).
+
+esAlcoholica(vino(,)).
+esAlcoholica(cerveza(,,A)):- A > 0.
   ```
